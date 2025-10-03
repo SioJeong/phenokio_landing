@@ -3,8 +3,8 @@ const WhySection = () => {
     <section className="relative min-h-[720px] flex items-center justify-center px-6 py-16 bg-gradient-to-b from-blue-50 to-purple-50">
       <div className="relative z-10 w-full max-w-md mx-auto text-center">
         {/* Badge */}
-        <div className="inline-block bg-white border-2 border-gray-800 rounded-full px-8 py-3 mb-12">
-          <span className="text-lg font-bold text-gray-900">WHY?</span>
+        <div className="inline-block bg-[#fefefe] border border-[#2d7bf2] rounded-full px-[25px] py-[12px] mb-12">
+          <span className="text-lg font-medium italic text-[#2d7bf2]">WHY?</span>
         </div>
 
         {/* Main Question */}

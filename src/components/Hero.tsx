@@ -29,7 +29,7 @@ const Hero = ({ onCTAClick }: HeroProps) => {
           <img
             src="/PHENOKIO_typo.png"
             alt="PHENOKIO"
-            className="w-[226px] h-[65px] mx-auto"
+            className="w-[150px] h-auto mx-auto"
           />
         </div>
 
@@ -41,13 +41,13 @@ const Hero = ({ onCTAClick }: HeroProps) => {
         </h2>
 
         {/* Event Badge */}
-        <div className="inline-block bg-white rounded-[20px] px-6 py-3 mb-[34px] relative z-20">
+        <div className="inline-block bg-white/60 rounded-[20px] px-6 py-3 mb-[34px] relative z-20">
           <p className="text-sm font-semibold text-[#082B61] leading-tight">
             피노키오 사전등록하기<br />
-            <span className="text-[#4A90E2]">10.3(금) - 10.10(금)</span>
+            <span className="text-[#082B61]">10.3(금) - 10.10(금)</span>
           </p>
           {/* Speech bubble tail */}
-          <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white"></div>
+          <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] border-l-transparent border-r-[10px] border-r-transparent border-t-[10px] border-t-white/60"></div>
         </div>
 
         {/* Character Image - positioned behind buttons */}
