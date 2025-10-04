@@ -67,15 +67,20 @@ const Hero = ({ onCTAClick }: HeroProps) => {
             onClick={() => onCTAClick("hero_preregister")}
           >
             피노키오 사전 등록하기
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <ArrowRight className="w-7 h-7 ml-0.5" strokeWidth={3} />
           </Button>
           <Button
             size="lg"
-            className="w-full h-14 bg-[#4A90E2] hover:bg-[#3A7FC2] text-white font-semibold rounded-full text-base shadow-lg"
-            onClick={() => onCTAClick("hero_beta")}
+            className="w-full h-14 bg-[#2D7BF2] hover:bg-[#3A7FC2] text-white font-semibold rounded-full text-base shadow-lg"
+            onClick={() => {
+              onCTAClick("hero_beta");
+              window.open("https://link.phenok.io/invite", "_blank");
+            }}
           >
             BETA 테스트 하러가기
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <svg className="w-7 h-7 ml-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7M17 7H7M17 7V17"/>
+            </svg>
           </Button>
         </div>
       </div>

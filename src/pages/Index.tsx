@@ -6,6 +6,7 @@ import Feature2 from "@/components/Feature2";
 import Feature3 from "@/components/Feature3";
 import PreRegistration from "@/components/PreRegistration";
 import Footer from "@/components/Footer";
+import StickyBottomBar from "@/components/StickyBottomBar";
 
 const Index = () => {
   const handleCTAClick = (buttonId: string) => {
@@ -18,8 +19,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen font-sans">
-      <Hero onCTAClick={handleCTAClick} />
+    <div className="min-h-screen font-sans pb-20">
+      <div id="hero">
+        <Hero onCTAClick={handleCTAClick} />
+      </div>
       <WhySection />
       <Feature1 />
       <Feature2 />
@@ -28,6 +31,7 @@ const Index = () => {
         <PreRegistration />
       </div>
       <Footer />
+      <StickyBottomBar onCTAClick={handleCTAClick} />
     </div>
   );
 };
