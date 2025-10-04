@@ -11,17 +11,33 @@ const StickyBottomBar = ({ onCTAClick }: StickyBottomBarProps) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Hero 섹션 높이보다 스크롤이 내려가면 표시
       const heroSection = document.getElementById("hero");
-      if (heroSection) {
+      const registrationForm = document.getElementById("registration-form");
+
+      if (heroSection && registrationForm) {
         const heroBottom = heroSection.offsetHeight;
-        setIsVisible(window.scrollY > heroBottom - 100);
+        const formRect = registrationForm.getBoundingClientRect();
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+
+        // Hero 섹션을 지나야 함
+        const isPastHero = scrollPosition > heroBottom - 100;
+
+        // 폼이 뷰포트에 있는지 체크 (폼의 어느 부분이라도 화면에 보이면 true)
+        const isFormInViewport = formRect.top < windowHeight && formRect.bottom > 0;
+
+        // Hero를 지났고, 폼이 보이지 않을 때만 바텀바 표시
+        setIsVisible(isPastHero && !isFormInViewport);
       }
     };
 
     handleScroll(); // 초기 상태 체크
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll); // 화면 크기 변경 시에도 체크
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
   }, []);
 
   if (!isVisible) return null;

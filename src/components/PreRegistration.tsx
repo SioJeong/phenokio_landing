@@ -118,7 +118,7 @@ const PreRegistration = () => {
         </div>
 
         {/* Registration Form */}
-        <form onSubmit={handleSubmit(onSubmit)} className="bg-[rgba(254,254,254,0.2)] border border-[#fefefe] rounded-[20px] px-6 pt-5 pb-6 flex flex-col gap-6 w-full">
+        <form id="registration-form" onSubmit={handleSubmit(onSubmit)} className="bg-[rgba(254,254,254,0.2)] border border-[#fefefe] rounded-[20px] px-6 pt-5 pb-6 flex flex-col gap-6 w-full">
           {/* Name Field */}
           <div className="flex flex-col gap-3 w-full">
             <label className="font-semibold text-[16px] text-[#363d47] leading-[1.4]">
@@ -184,7 +184,7 @@ const PreRegistration = () => {
               className={`w-full h-[43px] rounded-[12px] px-4 py-4 flex items-center justify-center font-semibold text-[14px] leading-[1.4] tracking-[-0.14px] lowercase transition-colors ${
                 consentGiven
                   ? 'bg-[#2d7bf2] text-[#fefefe]'
-                  : 'bg-[#eaecf0] text-[#8d94a0]'
+                  : 'bg-[#e4f1ff] text-[#2d7bf2]'
               }`}
             >
               동의합니다
@@ -197,7 +197,7 @@ const PreRegistration = () => {
             disabled={!consentGiven || isSubmitting}
             className={`w-full rounded-[12px] px-4 py-4 flex items-center justify-center gap-1 font-semibold text-[18px] leading-[1.35] tracking-[-0.18px] transition-colors ${
               consentGiven && !isSubmitting
-                ? 'bg-[#2d7bf2] text-[#fefefe]'
+                ? 'bg-[#082b61] text-[#fefefe]'
                 : 'bg-[#eaecf0] text-[#8d94a0]'
             }`}
           >

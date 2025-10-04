@@ -18,14 +18,18 @@ const Footer = () => {
         {/* Links */}
         <div className="flex items-center justify-center gap-4 pt-6 border-t border-gray-700">
           <a
-            href="#"
+            href="https://expensive-column-9a7.notion.site/2462dd8ca26280188094c121ebec4e44"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm hover:text-white transition-colors"
           >
             서비스 이용약관
           </a>
           <span className="text-gray-600">|</span>
           <a
-            href="#"
+            href="https://expensive-column-9a7.notion.site/2462dd8ca2628006867ff303cdc70642"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-sm hover:text-white transition-colors"
           >
             개인정보처리방침
