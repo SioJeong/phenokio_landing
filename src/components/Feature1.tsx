@@ -10,7 +10,7 @@ const Feature1 = () => {
       
       {/* Background gradient */}
       <div
-        className="absolute left-0 top-0 w-full h-[250px]"
+        className="absolute left-1/2 -translate-x-1/2 top-0 w-[600px] h-[250px]"
         style={{
           background: 'radial-gradient(circle at center top, rgba(215, 255, 236, 0.8) 0%, rgba(255, 255, 255, 0) 50%)'
         }}
