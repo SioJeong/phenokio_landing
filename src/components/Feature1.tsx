@@ -1,19 +1,19 @@
 const Feature1 = () => {
   return (
     <section className="relative min-h-[812px] flex items-center justify-center px-6 py-16 bg-[#f9fafc] overflow-hidden">
-      {/* Background gradient */}
-      <div
-        className="absolute left-0 top-0 w-full h-[250px]"
-        style={{
-          background: 'radial-gradient(circle at center top, rgba(215, 255, 236, 1) 0%, rgba(255, 255, 255, 0) 50%)'
-        }}
-      />
-
       {/* Background chart image */}
       <img
         src="/feature1_bg.png"
         alt=""
-        className="absolute left-1/2 -translate-x-1/2 top-[44px] w-auto h-auto max-w-none pointer-events-none opacity-40"
+        className="absolute left-1/2 -translate-x-1/2 top-[44px] w-auto h-auto max-w-none pointer-events-none opacity-60"
+      />
+      
+      {/* Background gradient */}
+      <div
+        className="absolute left-0 top-0 w-full h-[250px]"
+        style={{
+          background: 'radial-gradient(circle at center top, rgba(215, 255, 236, 0.8) 0%, rgba(255, 255, 255, 0) 50%)'
+        }}
       />
 
       <div className="relative z-10 w-full max-w-md mx-auto text-center mt-20">
