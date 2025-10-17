@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface StickyBottomBarProps {
   onCTAClick: (buttonId: string) => void;
@@ -12,22 +12,23 @@ const StickyBottomBar = ({ onCTAClick }: StickyBottomBarProps) => {
   useEffect(() => {
     const handleScroll = () => {
       const heroSection = document.getElementById("hero");
-      const registrationForm = document.getElementById("registration-form");
+      const appDownloadSection = document.getElementById("app-download");
 
-      if (heroSection && registrationForm) {
+      if (heroSection && appDownloadSection) {
         const heroBottom = heroSection.offsetHeight;
-        const formRect = registrationForm.getBoundingClientRect();
+        const downloadRect = appDownloadSection.getBoundingClientRect();
         const scrollPosition = window.scrollY;
         const windowHeight = window.innerHeight;
 
         // Hero 섹션을 지나야 함
         const isPastHero = scrollPosition > heroBottom - 100;
 
-        // 폼이 뷰포트에 있는지 체크 (폼의 어느 부분이라도 화면에 보이면 true)
-        const isFormInViewport = formRect.top < windowHeight && formRect.bottom > 0;
+        // 다운로드 섹션이 뷰포트에 있는지 체크 (섹션의 어느 부분이라도 화면에 보이면 true)
+        const isDownloadInViewport =
+          downloadRect.top < windowHeight && downloadRect.bottom > 0;
 
-        // Hero를 지났고, 폼이 보이지 않을 때만 바텀바 표시
-        setIsVisible(isPastHero && !isFormInViewport);
+        // Hero를 지났고, 다운로드 섹션이 보이지 않을 때만 바텀바 표시
+        setIsVisible(isPastHero && !isDownloadInViewport);
       }
     };
 
@@ -49,17 +50,15 @@ const StickyBottomBar = ({ onCTAClick }: StickyBottomBarProps) => {
         <div className="hidden sm:flex items-center justify-between">
           <div>
             <p className="text-lg font-semibold text-gray-900">
-              피노키오 사전 등록하기
+              피노키오 다운로드
             </p>
-            <p className="text-sm text-gray-600">
-              출시 알림을 가장 먼저 받아보세요
-            </p>
+            <p className="text-sm text-gray-600">지금 바로 앱을 만나보세요</p>
           </div>
           <Button
             className="bg-[#082B61] hover:bg-[#0A3575] text-white rounded-full px-6 py-3 font-semibold whitespace-nowrap"
             onClick={() => onCTAClick("sticky_bottom")}
           >
-            사전 등록하기
+            다운로드
             <ArrowRight className="w-5 h-5 ml-1" strokeWidth={2.5} />
           </Button>
         </div>
@@ -68,17 +67,17 @@ const StickyBottomBar = ({ onCTAClick }: StickyBottomBarProps) => {
         <div className="sm:hidden flex flex-col space-y-3">
           <div className="text-center">
             <p className="text-base font-semibold text-gray-900 leading-tight">
-              피노키오 사전 등록하기
+              피노키오 다운로드
             </p>
             <p className="text-xs text-gray-600 mt-1">
-              출시 알림을 가장 먼저 받아보세요
+              지금 바로 앱을 만나보세요
             </p>
           </div>
           <Button
             className="w-full bg-[#082B61] hover:bg-[#0A3575] text-white rounded-full py-3 font-semibold text-sm"
             onClick={() => onCTAClick("sticky_bottom")}
           >
-            사전 등록하기
+            다운로드
             <ArrowRight className="w-5 h-5 ml-1" strokeWidth={2.5} />
           </Button>
         </div>
