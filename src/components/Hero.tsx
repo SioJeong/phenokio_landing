@@ -85,9 +85,9 @@ const Hero = ({ onCTAClick }: HeroProps) => {
         {/* Character Image - positioned behind buttons */}
         <div className="relative w-full h-[200px] flex items-center justify-center">
           <img
-            src="/phenokio_character.png"
+            src="/animation_mascot.gif"
             alt="피노키오 캐릭터"
-            className="w-[180px] h-[170px] object-contain z-[1]"
+            className="w-[180px] h-[400px] object-contain z-[1]"
           />
         </div>
 
