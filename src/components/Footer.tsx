@@ -6,12 +6,24 @@ const Footer = () => {
         <h2 className="text-xl font-bold text-white mb-8">PHENOKIO</h2>
 
         {/* Company Info */}
-        <div className="space-y-3 text-sm mb-6">
-          <p>이메일: phenokio.team@gmail.com</p>
-          <p>연락처: 010-4565-4155</p>
-          <p>주소: 서울특별시 마포구 마포대로 89 포스트타워, 12층</p>
+        <div className="space-y-6 text-sm mb-6">
+          <div className="flex flex-row gap-4">
+            <h3 className="font-bold min-w-[60px]">마도로스</h3>
+            <div className="flex flex-col gap-1">
+              <p>사업자등록번호: 218-21-71514</p>
+              <p>경기도 양주시 옥정동로 190, 2605호</p>
+              <p>대표: 마준영</p>
+            </div>
+          </div>
+          <div className="flex flex-row gap-4">
+            <h3 className="font-bold min-w-[60px]">문의</h3>
+            <div className="flex flex-col gap-1">
+              <p>010-6559-1312</p>
+              <p>phenokio.team@gmail.com</p>
+            </div>
+          </div>
           <p className="text-gray-400 text-xs">
-            Copyright © 2025 Phenokio. All rights reserved.
+            Copyright © 2025 Madoros. All rights reserved.
           </p>
         </div>
 

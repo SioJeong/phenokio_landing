@@ -13,11 +13,20 @@ const AppDownload = () => {
   };
 
   const handleKakaoContact = () => {
-    window.open("https://open.kakao.com/o/s69ThYEh", "_blank");
+    window.open("http://pf.kakao.com/_VSCcn/chat", "_blank");
   };
 
   const handleGooglePlayDownload = () => {
-    // Google Play Store URL - 실제 URL로 교체 필요
+    // Meta Pixel 표준 이벤트: Lead
+    if (window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: "Google Play Download",
+        content_category: "App Download",
+        value: 0,
+        currency: "KRW",
+      });
+    }
+
     window.open(
       "https://play.google.com/store/apps/details?id=com.mink.phenokio&hl=ko",
       "_blank",
@@ -25,11 +34,17 @@ const AppDownload = () => {
   };
 
   const handleAppStoreDownload = () => {
-    // App Store URL - 실제 URL로 교체 필요
-    window.open(
-      "https://apps.apple.com/kr/app/%ED%94%BC%EB%85%B8%ED%82%A4%EC%98%A4-%EB%A9%80%EB%A6%AC-%EC%9E%88%EB%8A%94-%EA%B0%80%EC%A1%B1%EA%B3%BC%EC%9D%98-%EB%94%B0%EB%9C%BB%ED%95%9C-%EC%97%B0%EA%B2%B0%EA%B3%A0%EB%A6%AC/id6753330939?l=en-GB",
-      "_blank",
-    );
+    // Meta Pixel 표준 이벤트: Lead
+    if (window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: "App Store Download",
+        content_category: "App Download",
+        value: 0,
+        currency: "KRW",
+      });
+    }
+
+    window.open("https://phenoki.onelink.me/WI9R/suzw5zsx", "_blank");
   };
 
   return (
