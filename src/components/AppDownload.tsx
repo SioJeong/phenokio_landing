@@ -44,10 +44,7 @@ const AppDownload = () => {
       });
     }
 
-    window.open(
-      "https://apps.apple.com/kr/app/%ED%94%BC%EB%85%B8%ED%82%A4%EC%98%A4-%EB%A9%80%EB%A6%AC-%EC%9E%88%EB%8A%94-%EA%B0%80%EC%A1%B1%EA%B3%BC%EC%9D%98-%EB%94%B0%EB%9C%BB%ED%95%9C-%EC%97%B0%EA%B2%B0%EA%B3%A0%EB%A6%AC/id6753330939?l=en-GB",
-      "_blank",
-    );
+    window.open("https://phenoki.onelink.me/WI9R/suzw5zsx", "_blank");
   };
 
   return (
