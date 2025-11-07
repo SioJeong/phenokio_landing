@@ -63,57 +63,60 @@ const Hero = ({ onCTAClick }: HeroProps) => {
       style={{ height: viewportHeight || "100vh" }}
     >
       {/* Grid Pattern Background */}
-      <div className="absolute top-[273px] left-0 w-full h-[447px] flex items-center justify-center">
+      <div className="absolute top-[273px] md:top-[350px] lg:top-[400px] left-0 w-full h-[447px] md:h-[600px] lg:h-[700px] flex items-center justify-center md:hidden">
         <GridPattern />
       </div>
 
-      <div className="z-10 w-full max-w-[375px] mx-auto text-center px-6 flex flex-col mt-6 flex-1">
+      <div className="z-10 w-full max-w-[375px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl mx-auto text-center px-6 md:px-8 lg:px-12 flex flex-col mt-6 md:mt-12 lg:mt-16 flex-1">
         {/* Logo Image */}
-        <div className="mb-[12px] opacity-40">
+        <div className="mb-[12px] md:mb-4 lg:mb-6 opacity-40">
           <img
             src="/PHENOKIO_typo.png"
             alt="PHENOKIO"
-            className="w-[100px] h-auto mx-auto"
+            className="w-[100px] md:w-[160px] lg:w-[200px] h-auto mx-auto"
             loading="lazy"
           />
         </div>
 
         {/* Main Title */}
-        <h2 className="text-[24px] font-bold text-[#082B61] leading-[130%] tracking-[-1.02px] mb-[8px] px-4 text-center">
+        <h2 className="text-[24px] md:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#082B61] leading-[1.35] tracking-[-1.02px] mb-[8px] md:mb-4 lg:mb-6 px-4 text-center">
           멀리있는 부모님의 하루
           <br />
           전화로만 확인하셨나요?
         </h2>
 
         {/* Sub Title */}
-        <h3 className="text-[16px] font-regular text-[#FEFEFE] leading-[120%] tracking-[-1.02px] mb-[24px] px-4 text-center">
+        <h3 className="text-[16px] md:text-xl lg:text-2xl xl:text-3xl font-regular text-[#FEFEFE] leading-[1.35] tracking-[-1.02px] mb-[24px] md:mb-8 lg:mb-12 px-4 text-center">
           오늘도 흘러만 가는 부모님의 하루,
           <br />더 정확하게 건강 변화를 확인해보세요!
         </h3>
 
         {/* CTA Buttons */}
-        <div className="relative z-20 space-y-4 px-[28px] mb-8">
+        <div className="relative z-20 space-y-4 px-[28px] md:px-0 mb-8 md:mb-12 lg:mb-16">
           <Button
             size="lg"
-            className=" h-12 bg-[#082B61] hover:bg-[#0A3575] text-white font-semibold rounded-full text-base shadow-lg"
+            className="h-12 md:h-16 lg:h-20 bg-[#082B61] hover:bg-[#0A3575] text-white font-semibold rounded-full text-base md:text-lg lg:text-xl shadow-lg px-6 md:px-10 lg:px-12"
             onClick={() => onCTAClick("hero_download")}
           >
             지금 무료로 시작하기
-            <ArrowRight className="w-7 h-7 ml-0.5" strokeWidth={3} />
+            <ArrowRight
+              className="w-7 h-7 md:w-10 md:h-10 lg:w-14 lg:h-14 ml-0.5"
+              strokeWidth={3}
+            />
           </Button>
         </div>
 
         {/* Device Image */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-[300px] flex items-end justify-center">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-full h-[300px] md:h-[450px] lg:h-[600px] xl:h-[800px] flex items-end justify-center">
           <img
             src="/report.png"
             alt="디바이스 화면"
-            className="w-[400px] h-[400px] object-contain object-bottom z-10"
+            className="w-[400px] md:w-[500px] lg:w-[600px] xl:w-[800px] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px] object-contain object-bottom z-10"
             loading="lazy"
           />
           {/* Bottom fade to background over device */}
           <div
-            className="absolute inset-x-0 bottom-0 h-[160px] pointer-events-none z-20"
+            className="absolute inset-x-0 bottom-0 h-[160px] md:h-[200px] lg:h-[240px] pointer-events-none z-20"
             style={{
               background:
                 "linear-gradient(180deg, rgba(204, 229, 255, 0.00) 0%, #CCE5FF 95.09%)",
@@ -123,8 +126,8 @@ const Hero = ({ onCTAClick }: HeroProps) => {
       </div>
 
       {/* Scroll Guide */}
-      <div className="absolute bottom-[0px] left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center mb-3">
-        <p className="text-[#082B61] text-[16px] font-semibold animate-bounce mb-1">
+      <div className="absolute bottom-[0px] left-1/2 transform -translate-x-1/2 z-30 flex flex-col items-center mb-3 md:mb-6 lg:mb-8">
+        <p className="text-[#082B61] text-[16px] md:text-lg lg:text-xl font-semibold animate-bounce mb-1">
           아래로 스크롤 해보세요
         </p>
         <svg
@@ -132,7 +135,7 @@ const Hero = ({ onCTAClick }: HeroProps) => {
           height="28"
           viewBox="0 0 41 32"
           fill="none"
-          className="text-[#082B61] animate-bounce"
+          className="text-[#082B61] animate-bounce md:w-10 md:h-9 lg:w-12 lg:h-10"
         >
           <path
             d="M0.333 0L20.333 20L40.333 0"
