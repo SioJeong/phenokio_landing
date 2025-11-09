@@ -57,16 +57,16 @@ const reviews = [
 
 const AppReviews = () => {
   return (
-    <section className="relative py-16 bg-gradient-to-b from-white to-[#f8fbff] overflow-hidden">
-      <div className="max-w-[375px] mx-auto px-6 mb-12">
+    <section className="relative py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white to-[#f8fbff] overflow-hidden">
+      <div className="max-w-[375px] md:max-w-2xl lg:max-w-4xl mx-auto px-6 md:px-8 lg:px-12 mb-12 md:mb-16 lg:mb-20">
         {/* Section Header */}
-        <div className="flex flex-col gap-3 items-center text-center">
-          <div className="bg-[#e8f3ff] border border-[#2d7bf2] rounded-[50px] px-6 py-2">
-            <span className="font-semibold text-[16px] text-[#2d7bf2] leading-normal">
+        <div className="flex flex-col gap-3 md:gap-4 lg:gap-5 items-center text-center">
+          <div className="bg-[#e8f3ff] border border-[#2d7bf2] rounded-[50px] px-6 md:px-8 lg:px-10 py-2 md:py-3 lg:py-4">
+            <span className="font-semibold text-[16px] md:text-lg lg:text-xl text-[#2d7bf2] leading-normal">
               사용자 후기
             </span>
           </div>
-          <h2 className="font-bold text-[28px] text-[#082b61] leading-[1.35] tracking-[-0.84px]">
+          <h2 className="font-bold text-[28px] md:text-4xl lg:text-5xl xl:text-6xl text-[#082b61] leading-[1.35] tracking-[-0.84px]">
             피노키오와 함께하는
             <br />
             사용자들의 이야기
@@ -77,21 +77,21 @@ const AppReviews = () => {
       {/* Infinite Scroll Container */}
       <div className="relative">
         {/* Gradient Overlays */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#f8fbff] to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-16 md:w-24 lg:w-32 bg-gradient-to-r from-white to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-16 md:w-24 lg:w-32 bg-gradient-to-l from-[#f8fbff] to-transparent z-10" />
 
         {/* Scrolling Reviews */}
-        <div className="flex gap-4 animate-scroll">
+        <div className="flex gap-4 md:gap-6 lg:gap-8 animate-scroll">
           {/* First set of reviews */}
           {reviews.map((review) => (
             <div
               key={`first-${review.id}`}
-              className="flex-shrink-0 w-[280px] bg-white rounded-[16px] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-[#e8f3ff]"
+              className="flex-shrink-0 w-[280px] md:w-[340px] lg:w-[400px] bg-white rounded-[16px] md:rounded-[20px] p-6 md:p-7 lg:p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-[#e8f3ff]"
             >
-              <p className="font-medium text-[14px] text-[#2d7bf2] leading-[1.4] mb-3">
+              <p className="font-medium text-[14px] md:text-base lg:text-lg text-[#2d7bf2] leading-[1.4] mb-3 md:mb-4">
                 {review.author}
               </p>
-              <p className="font-normal text-[15px] text-[#5d6673] leading-[1.6]">
+              <p className="font-normal text-[15px] md:text-base lg:text-lg text-[#5d6673] leading-[1.6]">
                 {review.content}
               </p>
             </div>
@@ -100,12 +100,12 @@ const AppReviews = () => {
           {reviews.map((review) => (
             <div
               key={`second-${review.id}`}
-              className="flex-shrink-0 w-[280px] bg-white rounded-[16px] p-6 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-[#e8f3ff]"
+              className="flex-shrink-0 w-[280px] md:w-[340px] lg:w-[400px] bg-white rounded-[16px] md:rounded-[20px] p-6 md:p-7 lg:p-8 shadow-[0_2px_8px_rgba(0,0,0,0.08)] border border-[#e8f3ff]"
             >
-              <p className="font-medium text-[14px] text-[#2d7bf2] leading-[1.4] mb-3">
+              <p className="font-medium text-[14px] md:text-base lg:text-lg text-[#2d7bf2] leading-[1.4] mb-3 md:mb-4">
                 {review.author}
               </p>
-              <p className="font-normal text-[15px] text-[#5d6673] leading-[1.6]">
+              <p className="font-normal text-[15px] md:text-base lg:text-lg text-[#5d6673] leading-[1.6]">
                 {review.content}
               </p>
             </div>
