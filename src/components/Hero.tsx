@@ -63,7 +63,7 @@ const Hero = ({ onCTAClick }: HeroProps) => {
       style={{ height: viewportHeight || "100vh" }}
     >
       {/* Grid Pattern Background */}
-      <div className="absolute top-[273px] md:top-[350px] lg:top-[400px] left-0 w-full h-[447px] md:h-[600px] lg:h-[700px] flex items-center justify-center md:hidden">
+      <div className="absolute top-[273px] md:top-[350px] lg:top-[400px] left-0 w-full h-[447px] md:h-[600px] lg:h-[700px] flex items-center justify-center">
         <GridPattern />
       </div>
 
@@ -111,7 +111,7 @@ const Hero = ({ onCTAClick }: HeroProps) => {
           <img
             src="/report.png"
             alt="디바이스 화면"
-            className="w-[400px] md:w-[500px] lg:w-[600px] xl:w-[800px] h-[400px] md:h-[500px] lg:h-[600px] xl:h-[800px] object-contain object-bottom z-10"
+            className="w-[300px] xl:w-[420px] object-contain object-bottom z-10"
             loading="lazy"
           />
           {/* Bottom fade to background over device */}
