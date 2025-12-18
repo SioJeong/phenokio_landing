@@ -5,6 +5,7 @@ import Feature2 from "@/components/Feature2";
 import Feature3 from "@/components/Feature3";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
+import ServiceTerminationNotice from "@/components/ServiceTerminationNotice";
 import WhySection from "@/components/WhySection";
 import { useCallback } from "react";
 
@@ -20,6 +21,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen font-sans">
+      <section className="bg-white py-8 md:py-12 lg:py-16">
+        <ServiceTerminationNotice />
+      </section>
+
       <div id="hero">
         <Hero onCTAClick={handleCTAClick} />
       </div>
